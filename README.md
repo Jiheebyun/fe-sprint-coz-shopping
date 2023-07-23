@@ -47,3 +47,19 @@ Title :
     API 
         Swagger
             Reference: http://cozshopping.codestates-seb.link/api-docs/ 
+
+구현한 기능 영상
+
+    
+
+
+
+
+    Uploading 무한스크롤.mov…
+
+
+
+
+
+
+
