@@ -56,7 +56,7 @@ Title :
 <p>메인페이지 상품리스트 4개, 북마크 상품 4개</p>
 
 <img src="https://user-images.githubusercontent.com/61155854/255395410-1a21f08a-afbb-4fe1-931b-866360e7d7be.gif" width="300" height="250">
-<p>무한 스크롤 시능</p>
+<p>무한 스크롤 기능</p>
 
 
 
