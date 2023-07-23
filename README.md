@@ -36,7 +36,7 @@ Title :
     Products List Page : path -> /products/list
     
         - 서버에서 제공하는 상품 리스트들을 확인할 수 있는 페이지이며 무한 스크롤을 통해 상품들을 계속 보여줄 수 있어야 한다.
-            This is a page where you can check the list of products provided by the server, and the products must be continuously loaded through              infinite scrolling.
+            This is a page where you can check the list of products provided by the server, and the products must be continuously loaded throught infinite scrolling.
         - 상품은 각 상품별로 타입이 존재한다. (상품, 카테고리, 기획전, 브랜드)
             There are different product types such as products, categories, exhibitions, and friends.
         - 상단의 필터 버튼을 통해 상품을 타입별로 조회해 보여줄 수 있어야 한다.
