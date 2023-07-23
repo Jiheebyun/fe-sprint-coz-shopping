@@ -36,7 +36,7 @@ Title :
     Products List Page : path -> /products/list
     
         - 서버에서 제공하는 상품 리스트들을 확인할 수 있는 페이지이며 무한 스크롤을 통해 상품들을 계속 보여줄 수 있어야 한다.
-            This is a page where you can check the list of products provided by the server, and the products must be continuously loaded throught infinite scrolling.
+            This is a page where you can check the list of products provided by the server, and the products must be continuously loaded through infinite scrolling.
         - 상품은 각 상품별로 타입이 존재한다. (상품, 카테고리, 기획전, 브랜드)
             There are different product types such as products, categories, exhibitions, and friends.
         - 상단의 필터 버튼을 통해 상품을 타입별로 조회해 보여줄 수 있어야 한다.
@@ -46,7 +46,7 @@ Title :
         - 각 상품에 존재하는 북마크 버튼을 눌러 원하는 상품을 북마크 할 수 있어야 한다.
             You must be able to bookmark a desired product by pressing the bookmark button present in each product.
         - 이미 북마크 된 상품의 경우, 북마크 버튼에 표시를 해주어야 하며 다시 한 번 북마크 버튼을 클릭 시 해당 상품을 북마크에서 삭제한다.
-            In the case of a product that has already been bookmarked, you must mark it on the bookmark button and click the bookmark button                 again to delete the product from the bookmark.
+            In the case of a product that has already been bookmarked, you must mark it on the bookmark button and click the bookmark button      again to delete the product from the bookmark.
 
     BookMark Page : path -> /bookmark
     
