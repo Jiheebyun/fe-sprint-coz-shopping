@@ -52,7 +52,7 @@ Title :
 
     
 
-<img src="[/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG](https://github.com/Jiheebyun/fe-sprint-coz-shopping/assets/61155854/dc498c51-9cd1-4d8a-9e8d-8f2dae692caf)https://github.com/Jiheebyun/fe-sprint-coz-shopping/assets/61155854/dc498c51-9cd1-4d8a-9e8d-8f2dae692caf"  width="600" height="500">
+<img src="https://user-images.githubusercontent.com/61155854/255394712-dc498c51-9cd1-4d8a-9e8d-8f2dae692caf.gif"  width="600" height="500">
 
 
 
