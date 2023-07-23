@@ -69,7 +69,13 @@ Title :
 <img src="https://user-images.githubusercontent.com/61155854/255395410-1a21f08a-afbb-4fe1-931b-866360e7d7be.gif" width="300" height="250">
 <p>- 무한 스크롤 기능</p>
 
+<br>
+<br>
+<br>
 
+
+<h3>진행하면서 만난 문제들<h3>
+<h2>...</h2>
 
 
 
