@@ -25,9 +25,9 @@ Title :
     Main Page : path -> /
     
         -Header와 Footer는 항상 고정
-            Header and footer are always fixed
+            Header and footer are always fixed.
         -햄버거버튼 클릭시, 페이지 이동
-            When the hamburger button is clicked, the page moves
+            When the hamburger button is clicked, the page moves.
         -메인 페이지의 상품 리스트는 카테고리별로 하나씩 4개를 보여줘야한다.
             The product list on the main page should show 4 items, one for each category.
         -메인 페이지의 북마크 리스트는 카테고리별로 하나씩 4개를 보여줘야한다.
