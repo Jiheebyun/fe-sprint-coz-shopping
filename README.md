@@ -48,9 +48,7 @@ Title :
         Swagger
             Reference: http://cozshopping.codestates-seb.link/api-docs/ 
 
-구현한 기능 영상
-
-    
+<h3>구현한 기능 영상</h3>
 
 <img src="https://user-images.githubusercontent.com/61155854/255394712-dc498c51-9cd1-4d8a-9e8d-8f2dae692caf.gif"  width="300" height="250">
 <p>카테고리별 상품리스트 기능</p>
