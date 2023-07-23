@@ -5,15 +5,15 @@ Title :
 구현될 기능 
     
     - 메인페이지에서 router사용하여 페이지 이동
-    
+        Pages move with using router-dom
     - header에 있는 메뉴는 클릭했을때 drop-down 메뉴
-    
+        when the header's button clicked, it shows drop-down manu. 
     - 상품리스트 페이지 
-    
+        product'list pages
     - 북마크 페이지 - 무한스트롤 기능, 상품별 필터기능 
-
+        Bookmark pages - infinite scroll, filtering by categories.
     - Modal 창
-
+        Modal
 실행 명렁어
 
     - npm install 
