@@ -62,12 +62,12 @@ Title :
 <h3>구현한 기능 영상</h3>
 
 <img src="https://user-images.githubusercontent.com/61155854/255394712-dc498c51-9cd1-4d8a-9e8d-8f2dae692caf.gif"  width="300" height="250">
-<p>카테고리별 상품리스트 기능</p>
+<p>- 카테고리별 상품리스트 기능</p>
 <img src="https://user-images.githubusercontent.com/61155854/255394962-ebf08c0f-f424-44a0-9b39-0015bc2c8dc5.png" width="300" height="250">
-<p>메인페이지 상품리스트 4개, 북마크 상품 4개</p>
+<p>- 메인페이지 상품리스트 4개, 북마크 상품 4개</p>
 
 <img src="https://user-images.githubusercontent.com/61155854/255395410-1a21f08a-afbb-4fe1-931b-866360e7d7be.gif" width="300" height="250">
-<p>무한 스크롤 기능</p>
+<p>- 무한 스크롤 기능</p>
 
 
 
