@@ -1,24 +1,44 @@
 import React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
 
 
 const CategoryList = (props) =>{
 
-
-    console.log(props.target)
-    
-    // useEffect(() => {
-    //     observer.observe(target.current);
-    //   }, []);
-    
+    const [isLoading, setIsLoading] = useState(false);
+    const target = useRef(null);
+    const viewPoart = useRef();
 
     const options = {
-        threshold: 1.0,
+        root: viewPoart.current,
+        rootMargin: "0px",
+        threshold: 0.5,
     }
+    
+    const onIntersect = ([entry], observer)=>{
+        if (entry.isIntersecting && !isLoading){
+            setIsLoading(true);
+            axios.get('http://cozshopping.codestates-seb.link/api/v1/products?count=10')
+            .then((res)=>{
+              const newData = res.data && res.data.map((el)=>{
+                return {...el, isBookMarked:false}})
+                props.setNewData(newData);
+            })
+            setIsLoading(false);
+            observer.observe(target.current);
+        }
+    } 
 
-    const addItemList = ()=>{
-        console.log('실행됨')
-    }
+    useEffect( () => {
+        let observer;
+        if (target.current) {
+          // callback 함수, option
+          observer = new IntersectionObserver(onIntersect, options);
+          observer.observe(target.current); // 타겟 엘리먼트 지정
+        }
+        return () => observer && observer.disconnect();//다수의 엘리먼트를 관찰하고 있을떄, 이에대한 모든 관찰을 멈추고 싶을때 사용한다
+      }, [target]);
+
 
     const filteredData = props.items.filter((el)=>{
         if(props.selectedCategory === 'All'){
@@ -33,16 +53,13 @@ const CategoryList = (props) =>{
         }
     })
 
-    const observer = new IntersectionObserver(addItemList,options)
-
-    console.log(filteredData)
-
+   
 
     // items={props.items} selectedCategory={props.selectedCategory} bookMarkHanler ={props.bookMarkHanler}
     return(
         <div className='category-list-container'>  
         {/* category-list-container에 무한스크롤기능을 넣어야한다. */}
-                <div className='category-item-container'ref={props.target} >
+                <div className='category-item-container'ref={viewPoart} >
                 {filteredData.map((el,idx)=>{
                     return(
                         <ul key={idx}>
@@ -68,7 +85,7 @@ const CategoryList = (props) =>{
                     )
                  })}
                  
-                            <div className='scroll-container' ref={props.target} >
+                            <div className='scroll-container' ref={target} >
                                 <h2></h2>
                             </div>
 

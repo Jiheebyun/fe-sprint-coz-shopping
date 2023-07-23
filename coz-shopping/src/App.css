@@ -294,6 +294,7 @@
 /* SCROLL  */
 
 .scroll-container{
+  margin-top: 100px;
   height:200px;
   background-color:rgb(255, 255, 255);
 }

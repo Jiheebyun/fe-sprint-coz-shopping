@@ -12,22 +12,24 @@ import BookMarkList from './components/bookMarkPage/bookMarkList';
  
 
 
+// http://cozshopping.codestates-seb.link/api/v1/products?count=10
 
 function App() {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const target = useRef(null);
- 
-  useEffect(()=>{
-    axios.get('http://cozshopping.codestates-seb.link/api/v1/products?count=10')
-      .then((res)=>{
-        const newData = res.data && res.data.map((el)=>{
-          return {...el, isBookMarked:false}})
-        setData(newData)
-      })
-    },[])
+  const [bookMarkData, setBookMarkData] = useState([]);  
 
-    console.log(data)
+
+  // useEffect(()=>{
+  //   axios('http://cozshopping.codestates-seb.link/api/v1/products?count=10')
+  //     .then((res)=>{
+  //       setData(res.data)
+  //     })
+  //   },[])
+
+  const setNewData = (newData) =>{
+    setData((prevData) => [...prevData, ...newData])
+  }
 
   const bookMarkHandler = (id)=>{ //mainProductList에서 bookmark이미지를 클릭하면 콜되는 함수. 
     const marked = data.map((el)=>{
@@ -44,7 +46,7 @@ function App() {
     setSelectedCategory(e.target.id)
     console.log(selectedCategory);
   }
-  console.log(selectedCategory)
+
 
   return (
     <BrowserRouter>
@@ -55,19 +57,20 @@ function App() {
             <Route path="/" 
               element={<MainProductList 
                 items = {data} 
-                addedBookMark = {data}
                 selectedCategory = "BOOKMARK"
                 bookMarkHandler = {bookMarkHandler}
                 categoryHandler = {categoryHandler}
+                setNewData = {setNewData}
               />}></Route>
             <Route path="/products/list" 
               element = {<Category 
-                items = {data}    
+                items = {data}
                 addedBookMark = {data}
                 bookMarkHandler = {bookMarkHandler}
                 categoryHandler = {categoryHandler}
                 selectedCategory = {selectedCategory}
-                target = {target}
+                setBookMarkData = {setBookMarkData}
+                setNewData = {setNewData}
               /> }></Route>
             <Route path="/bookmark" 
               element = {<BookMarkList
@@ -76,6 +79,7 @@ function App() {
                 selectedCategory = {selectedCategory}
                 bookMarkHandler = {bookMarkHandler}
                 categoryHandler = {categoryHandler}
+                setNewData = {setNewData}
               />}></Route>
           </Routes>
         </div>

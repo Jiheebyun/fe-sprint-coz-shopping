@@ -6,6 +6,9 @@ import CategoryList from '../productList/categoryList';
 
 const MainProductList = (props)=>{
 
+    const mainBookMarkList = props.items.filter((el)=>{
+        return el.isBookMarked === true
+    })
 
     return(
         <div className='products-container'>
@@ -13,7 +16,7 @@ const MainProductList = (props)=>{
             <div className='product-list-container'>
                 <h2>상품 리스트</h2>
                 <div className='product-item-container' >
-                {props.addedBookMark.map((el,idx)=>{
+                { props.items.slice(0,4).map((el,idx)=>{
                     return(
                         <ul key={el.id}>
                             <li>
@@ -25,7 +28,7 @@ const MainProductList = (props)=>{
                                  <img className="bookmark-on-off" src={require('../../img/북마크 아이콘 - on.png')}></img>
                                 :<img className="bookmark-on-off" src={require('../../img/북마크 아이콘 - off.png')}></img> 
                                 }
-                                </div>
+                                </div> 
                                 </div>
                                 <div className='product-itme-content'>
                                     <span className='product-item-content-title'>{el.title}</span>
@@ -43,7 +46,12 @@ const MainProductList = (props)=>{
             <div className='bookmark-list-container'>
                 <h2>북마크 리스트</h2>
                 <div className='bookmark-item-container'>
-                 <CategoryList items={props.items} selectedCategory={props.selectedCategory} bookMarkHandler ={props.bookMarkHandler}  ></CategoryList>
+                 <CategoryList 
+                    items={mainBookMarkList.slice(0,4)} 
+                    selectedCategory={props.selectedCategory} 
+                    bookMarkHandler ={props.bookMarkHandler}
+                    setNewData={props.setNewData}
+                    ></CategoryList>
                 </div>
             </div>
 

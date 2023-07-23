@@ -45,6 +45,7 @@ const Category = (props)=>{
                 selectedCategory={props.selectedCategory} 
                 bookMarkHandler ={props.bookMarkHandler} 
                 target={props.target}
+                setNewData = {props.setNewData}
             >
             </CategoryList>
         </div>

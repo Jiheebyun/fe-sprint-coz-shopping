@@ -9,6 +9,9 @@ import CategoryList from '../productList/categoryList';
 
 
 const BookMarkList = (props)=> {
+
+    
+
     return (
             <div className='category'>
                 <div className='category-container'>
@@ -48,6 +51,7 @@ const BookMarkList = (props)=> {
                     selectedCategory = {props.selectedCategory} 
                     bookMarkHandler = {props.bookMarkHandler} 
                     id="BOOKMARK"
+                    setNewData = {props.setNewData}
                     ></CategoryList>
             </div> 
     )
